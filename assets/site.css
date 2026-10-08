@@ -366,3 +366,20 @@ address { font-style: normal; }
 [tabindex="-1"]:focus { outline: none; }
 /* five-item lists sit 3 + 2 instead of leaving one alone on a row */
 .features.five { grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+
+/* header: nav plus language switch */
+.header-right { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
+.lang-switch {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0.25rem 0.9rem;
+  border: 2px solid var(--ink); border-radius: 999px; color: var(--ink); text-decoration: none;
+  font-weight: 700; font-size: var(--step--1);
+}
+.lang-switch:hover { background: var(--tint); color: var(--ink); text-decoration: underline; }
+
+/* Indigenous affirmation */
+.affirmation { background: var(--tint); }
+.affirmation h2 { font-size: var(--step-2); }
+
+/* French quotation marks */
+.quote:lang(fr) p::before { content: "\00AB\00A0"; }
+.quote:lang(fr) p::after { content: "\00A0\00BB"; }
